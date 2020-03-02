@@ -141,7 +141,7 @@ For the workflow we are currently doing you would probably want to use ```qsub -
 qsub: waiting for job 2595948.pbsserver to start
 qsub: job 2595948.pbsserver ready
 
-[jdar4135@hpc242 ~]$v
+[jdar4135@hpc242 ~]$
 ~~~
 {: .output}
 
@@ -187,9 +187,7 @@ cd hayimdata
 Now, download and extract the data archive below:
 
 ~~~
-wget https://www.dropbox.com/s/b0m31e4cj9wudx9/Automation.tar.gz
-
-tar -zxvf Automation.tar.gz
+tar -zxvf /project/Training/DATA/Automation.tar.gz -C /project/Training/hayimdata
 ~~~
 {: .bash}
 
