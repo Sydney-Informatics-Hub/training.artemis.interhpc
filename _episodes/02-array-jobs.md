@@ -1,5 +1,5 @@
 ---
-title: "Automating with Array Jobs"
+title: "PBS Job Arrays"
 teaching: 25
 exercises: 5
 questions:
