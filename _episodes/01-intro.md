@@ -219,12 +219,6 @@ Automation/Alignment/BD394_C16NWHCXX_ATTCCT_L002_R1.fastq.gz
 ~~~
 {: .output}
 
-Delete the archive once you've unpacked it:
-
-~~~
-rm Automation.tar.gz
-~~~
-{: .bash}
 
 Finally, we can now **exit** our interactive job:
 
