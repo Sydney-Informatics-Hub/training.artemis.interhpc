@@ -302,7 +302,7 @@ This is job number 9 in the array
 {: .output}
 
 <br><br>
-## Another array job!
+## Array job log redirection!
 
 We're going to try that again, but with a small modification. The outputs from our first array job were all _**piped**_ to different locations, using the ```>``` redirect
 
