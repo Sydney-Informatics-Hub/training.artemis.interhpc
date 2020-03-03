@@ -23,18 +23,18 @@ An **array job** is simply a job duplicated many times. It is organised as an _a
 ~~~
 #PBS -J 1-100
 ~~~
-{: .bash}
+{: .output}
 
 ~~~
 #PBS -J 4-25:3
 ~~~
-{: .bash}
+{: .output}
 
 The first example **directive** above will launch 100 copies of the job defined in the **PBS script**, with each copy having an **array index** equal to an integer from _1 to 100_. The second example will launch 8 copies of the job defined in the script, with each copy having an **array index** equal to an integer from _4 to 25_ in steps of _3_.
 
 In general, the argument to the ```-J``` directive is ```i-f[:s]``` for non-negative integers _i<f, s_, which creates rising indices starting from **initial value _i_**, to a **maximum final value _f_**, in **steps of _s_**. The step argument is optional, and defaults to _1_.
 
-A quick and pointless example of an array job could be submitting the following script, **hello_array.sh**
+A quick and pointless example of an array job could be submitting the following script. Make a new file with ```nano``` called **hello_array.sh** and add the following two lines
 
 ~~~
 #!/bin/bash
@@ -42,7 +42,7 @@ echo "Hello, world. I am job $PBS_ARRAY_INDEX"
 ~~~
 {: .bash}
 
-via
+Now submit the script to the queue via:
 
 ~~~
 qsub -P Training -J 1-3 hello_array.sh
@@ -196,15 +196,16 @@ qstat: Unknown Job Id 596901.pbsserver
 {: .output}
 
 <br>
-### qstat for array jobs
+### qstat and -t flag for array jobs
 
-What went wrong? We left off the ```[]```. Now query all **subjobs** in your array with ```qstat -t```.
+What went wrong? We left off the ```[]```. 
 
 ~~~
-qstat -t 596901[]
+qstat 596901[]
 ~~~
 {: .bash}
 
+To query **all subjobs** in use the ```-t``` flag with ```qstat -t jobid[]```.
 ~~~
 [jdar4135@login3 Demo-a]$ qstat -t 2596901[]
 Job id            Name             User              Time Use S Queue
