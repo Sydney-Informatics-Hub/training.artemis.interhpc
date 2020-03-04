@@ -18,7 +18,7 @@ This episode explores using _Bash_ functions and scripting to automate, or 'batc
 
 In the previous Episode we used the **PBS_ARRAY_INDEX** variable as a tool to run slightly different jobs using the same **PBS script**. This works because the array index of a subjob is an _arbitrary_ variable that nothing in the PBS execution process depends on, so we can use it for our needs.
 
-Another such arbitrary variable is the **PBS job name**, the human-readable name we have been giving our jobs so that we could more easily keep track of them. The key here is that we don't need to set the job name via a **PBS directive** in a PBS script -- we can also just _pass it_ to PBS as an an **option** in the call to ```qsub```.
+Another such arbitrary variable is the **PBS job name**, the human-readable name we have been giving our jobs so that we could more easily keep track of them. The key here is that we don't need to set the job name via a **PBS directive** in a PBS script -- we can also just _pass it_ to PBS as an **option** in the call to ```qsub```.
 
 To see this in action, navigate to the **Povray** directory, and open **single_image.pbs** in your preferred editor.
 
