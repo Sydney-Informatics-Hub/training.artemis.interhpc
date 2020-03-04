@@ -434,7 +434,7 @@ Job id            Name             User              Time Use S Queue
 ~~~
 {: .output}
 
-Practis checking an individual subjob:
+Practice checking an individual subjob:
 
 ~~~
 [jdar4135@login1 Demo-b]$ qstat -t 2597100[7]
