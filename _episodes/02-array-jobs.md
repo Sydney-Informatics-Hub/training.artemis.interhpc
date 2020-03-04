@@ -10,7 +10,9 @@ objectives:
 keypoints:
 - "Arrays allow you to submit multiple similar jobs in one script"
 - Submit an array job with option ```-J i-f:s```
+- Monitor the queue with ```qstat -t jobid[]```
 - "The ```^array_index^``` construction can be used inside PBS directives"
+- "The ```$PBS_ARRAY_INDEX``` construction is used elsewhere in your PBS script"
 ---
 This episode introduces PBS Array Jobs, which can submit multiple jobs at once.
 
